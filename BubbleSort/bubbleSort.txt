@@ -1,0 +1,65 @@
+Bubble Sort :
+===========
+Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they
+are in the wrong order. This algorithm is not suitable for large data sets as its average and worst-case time
+complexity is quite high.
+
+Example:
+------- 
+-> First Pass: 
+   ( {5 1} 4 2 8 ) –> ( {1 5} 4 2 8 ), Here, algorithm compares the first two elements, and swaps since 5 > 1. 
+   ( 1 {5 4} 2 8 ) –> ( 1 {4 5} 2 8 ), Swap since 5 > 4 
+   ( 1 4 {5 2} 8 ) –> ( 1 4 {2 5} 8 ), Swap since 5 > 2 
+   ( 1 4 2 {5 8} ) –> ( 1 4 2 {5 8} ), Now, since these elements are already in order (8 > 5), algorithm does not
+                                       swap them.
+
+-> Second Pass: 
+   ( {1 4} 2 5 8 ) –> ( {1 4} 2 5 8 ) 
+   ( 1 {4 2} 5 8 ) –> ( 1 {2 4} 5 8 ), Swap since 4 > 2 
+   ( 1 2 {4 5} 8 ) –> ( 1 2 {4 5} 8 ) 
+   ( 1 2 4 {5 8} ) –> ( 1 2 4 {5 8} ) 
+
+Now, the array is already sorted, but our algorithm does not know if it is completed. The algorithm needs one whole
+pass without any swap to know it is sorted.
+
+-> Third Pass: 
+   ( {1 2} 4 5 8 ) –> ( {1 2} 4 5 8 ) 
+   ( 1 {2 4} 5 8 ) –> ( 1 {2 4} 5 8 ) 
+   ( 1 2 {4 5} 8 ) –> ( 1 2 {4 5} 8 ) 
+   ( 1 2 4 {5 8} ) –> ( 1 2 4 {5 8} )
+
+Worst and Average Case Time Complexity:
+--------------------------------------
+-> O(N2). The worst case occurs when an array is reverse sorted.
+
+Best Case Time Complexity:
+-------------------------
+-> O(N). The best case occurs when an array is already sorted.
+
+Auxiliary Space:
+---------------
+-> O(1)
+
+1. Difference between iterative and recursive bubble sort?
+Ans. Recursive bubble sort runs on O(n) auxiliary space complexity whereas iterative bubble sort runs on O(1)
+     auxiliary space complexity.
+
+2. Which is faster iterative or recursive bubble sort?
+Ans. Based on the number of comparisons in each method, the recursive bubble sort is better than the iterative
+     bubble sort, but the time complexity for both the methods is same.
+
+3. Which sorting method we should prefer more iterative or recursive bubble sort?
+Ans. Both the methods complete the computation at the same time(according to time complexity analysis) but iterative
+     code takes less memory than recursive one, so we should prefer iterative bubble sort more than recursive bubble
+     sort.
+
+4. What is the Boundary Case for Bubble sort? 
+Ans. Bubble sort takes minimum time (Order of n) when elements are already sorted. Hence it is best to check if the
+     array is already sorted or not beforehand, to avoid O(N2) time complexity.
+
+5. Does sorting happen in place in Bubble sort?
+Ans. Yes, Bubble sort performs the swapping of adjacent pairs without the use of any major data structure. Hence
+     Bubble sort algorithm is an in-place algorithm.
+
+6. Is the Bubble sort algorithm stable?
+Ans. Yes, the bubble sort algorithm is stable
